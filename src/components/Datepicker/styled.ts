@@ -39,4 +39,15 @@ const StyledDatepicker = styled.input`
   }
 `;
 
-export { DatepickerContainer, StyledDatepicker };
+const StyledCalendarIcon = styled(CalendarIconComponent)<{ hasFocus: boolean }>`
+  position: absolute;
+  display: ${({ hasFocus }) => (hasFocus ? "none" : "block")};
+  right: 1px;
+  top: calc(50% - 2px);
+  transform: translate(-100%, -50%);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+`;
+
+export { DatepickerContainer, StyledDatepicker, StyledCalendarIcon };
