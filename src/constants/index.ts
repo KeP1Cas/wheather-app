@@ -1,39 +1,39 @@
-export const WEATHER_API_KEY = "8b0655f858009fd788bf700ca7e9a427";
+export const WEATHER_API_KEY = "0c9db385178301d7ceaf6410c759753b";
 
 export const MERCURY_CITIES_RECORDS = {
   samara: {
     title: "Samara",
     coordinates: {
       lat: "53.195873",
-      lot: "50.100193",
+      lon: "50.100193",
     },
   },
   tolyatti: {
     title: "Tolyatti",
     coordinates: {
       lat: "53.507836",
-      lot: "49.420393",
+      lon: "49.420393",
     },
   },
   saratov: {
     title: "Saratov",
     coordinates: {
       lat: "51.533557",
-      lot: "46.034257",
+      lon: "46.034257",
     },
   },
   kazan: {
     title: "Kazan",
     coordinates: {
       lat: "55.796127",
-      lot: "49.106405",
+      lon: "49.106405",
     },
   },
   krasnodar: {
     title: "Krasnodar",
     coordinates: {
       lat: "45.035470",
-      lot: "38.975313",
+      lon: "38.975313",
     },
   },
 };
@@ -64,7 +64,7 @@ export const DESIGN_VARS = {
     meta: "18px",
   },
   deviceFormats: {
-    tabled: "1280px",
+    tabled: "1400px",
     mobile: "445px",
   },
 };
