@@ -8,6 +8,7 @@ const AppTitleContainer = styled.h1`
     "empty forecasttitle";
   font-size: 102px;
   color: ${DESIGN_VARS.color.white};
+  line-height: 122px;
   font-family: UbuntuBold;
 `;
 
