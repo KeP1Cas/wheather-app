@@ -8,8 +8,23 @@ const AppTitleContainer = styled.h1`
     "empty forecasttitle";
   font-size: 102px;
   color: ${DESIGN_VARS.color.white};
-  line-height: 122px;
   font-family: UbuntuBold;
+
+  @media (max-width: ${DESIGN_VARS.deviceFormats.tablet}) {
+    font-size: 80px;
+  }
+
+  @media (max-width: ${DESIGN_VARS.deviceFormats.smallTablet}) {
+    font-size: 60px;
+  }
+
+  @media (max-width: ${DESIGN_VARS.deviceFormats.mobile}) {
+    font-size: 54px;
+  }
+
+  @media (max-width: ${DESIGN_VARS.deviceFormats.smallMobile}) {
+    font-size: 32px;
+  }
 `;
 
 const AppPartTitleWeather = styled.div`

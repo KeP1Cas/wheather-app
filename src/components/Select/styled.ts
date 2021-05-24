@@ -20,6 +20,7 @@ const StyledSelect = styled.input`
   outline: none;
   font-size: 16px;
   font-weight: 400;
+  cursor: pointer;
 
   :focus {
     border: 2px solid #373af5;

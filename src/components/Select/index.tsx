@@ -15,13 +15,14 @@ export type SelectValue = {
 };
 
 type Props = {
-  values: SelectValue[];
+  options: SelectValue[];
   placeholder: string;
+  onChange: (value: any) => void;
+  value: string;
 };
 
-const Select: React.FC<Props> = ({ values, placeholder }) => {
+const Select: React.FC<Props> = ({ options, placeholder, onChange, value }) => {
   const [isActive, setIsActive] = useState(false);
-  const [activeOption, setActiveOption] = useState<number | string>("");
 
   const selectContainerRef = useRef({} as HTMLDivElement);
 
@@ -42,22 +43,18 @@ const Select: React.FC<Props> = ({ values, placeholder }) => {
   };
 
   const onClickOption = (value: string | number) => {
-    setActiveOption(value);
+    onChange(value);
   };
 
   return (
     <SelectContainer ref={selectContainerRef} onClick={onClick} onBlur={onBlur}>
-      <StyledSelect
-        readOnly
-        placeholder={placeholder}
-        value={`${activeOption}`}
-      />
+      <StyledSelect readOnly placeholder={placeholder} value={`${value}`} />
       <SelectDropdownContainer isActive={isActive}>
         <SelectDropdown>
-          {values.map(({ title, value }, idx) => (
+          {options.map(({ title, value: optionValue }, idx) => (
             <SelectOption
-              isActive={activeOption === value}
-              onClick={() => onClickOption(value)}
+              isActive={optionValue === value}
+              onClick={() => onClickOption(optionValue)}
               key={idx}
             >
               {title}
